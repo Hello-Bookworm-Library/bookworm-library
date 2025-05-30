@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookworm Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bookworm Library</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#request">Request Books</a></li>
+                <li>
+                    <a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to Bookworm Library</h1>
+            <p>Your gateway to endless knowledge and adventures</p>
+        </section>
+
+        <section id="catalog" class="book-catalog">
+            <h2>Available Books</h2>
+            <div class="books-grid" id="booksContainer">
+                <!-- Books will be loaded here -->
+            </div>
+        </section>
+
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Your Book Cart</h2>
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <p>Total Books: <span id="totalBooks">0</span></p>
+                </div>
+                <button id="issueBooks" class="issue-button">Issue Books</button>
+            </div>
+        </div>
+
+        <section id="request" class="request-section">
+            <h2>Request a Book</h2>
+            <form id="bookRequestForm">
+                <div class="form-group">
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments"></textarea>
+                </div>
+                <button type="submit">Submit Request</button>
+     	 <form action="mailto:hello.bookwormlibrary@gmail.com" method="post" enctype="text/plain">
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bookworm Library. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
